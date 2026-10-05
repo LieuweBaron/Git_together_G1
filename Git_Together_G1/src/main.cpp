@@ -3,6 +3,8 @@
 // put function declarations here:
 int myFunction(int, int);
 void blink();
+void on();
+void off();
 
 void setup() {
   // put your setup code here, to run once:
@@ -17,10 +19,16 @@ void loop() {
 
 // put function definitions here:
 void blink() {
+  on();
+  off();
+}
+
+void on() {
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(500);
+}
+
+void off() {
   digitalWrite(LED_BUILTIN, LOW);
-  delay(500);
 }
 
 int myFunction(int x, int y) {
