@@ -19,7 +19,7 @@ int add(int x, int y) {
   return ;
 }
 
-int add(int x, int y) {
+int multiply(int x, int y) {
   return ;
 }
 
