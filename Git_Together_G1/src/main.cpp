@@ -3,30 +3,99 @@
 long last_time = 0;
 bool blink_mode = 0;
 // put function declarations here:
-void blink();
-void on();
-void off();
+int add(int, int);
+int multiply(int, int);
+void blink(bool mode);
 
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  blink();
+  if(millis() - last_time >= 1000) {
+    last_time = millis();
+    if(blink_mode == 0) {
+      blink_mode = 1;
+      blink(blink_mode);
+    } else {
+      blink_mode = 0;
+      blink(blink_mode);
+    }
+  }
+  Serial.println("what Function do you want to use?");
+  Serial.println("1: add");
+  Serial.println("2: multiply");
+  while (Serial.available() == 0) {
+    if(millis() - last_time >= 1000) {
+      last_time = millis();
+      if(blink_mode == 0) {
+        blink_mode = 1;
+        blink(blink_mode);
+      } else {
+        blink_mode = 0;
+        blink(blink_mode);
+      }
+    }
+  }
+  int mode = Serial.parseInt();
+  while (Serial.available() > 0) {
+    Serial.read();
+  }
+  Serial.println("whats the first number?");
+  while (Serial.available() == 0) {
+    if(millis() - last_time >= 1000) {
+      last_time = millis();
+      if(blink_mode == 0) {
+        blink_mode = 1;
+        blink(blink_mode);
+      } else {
+        blink_mode = 0;
+        blink(blink_mode);
+      }
+  }
+  int num1 = Serial.parseInt();
+  while (Serial.available() > 0) {
+    Serial.read();
+  }
+  Serial.println("whats the second number?");
+  while (Serial.available() == 0) {
+    if(millis() - last_time >= 1000) {
+      last_time = millis();
+      if(blink_mode == 0) {
+        blink_mode = 1;
+        blink(blink_mode);
+      } else {
+        blink_mode = 0;
+        blink(blink_mode);
+      }
+    }
+  }
+  int num2 = Serial.parseInt();
+  while (Serial.available() > 0) {
+    Serial.read();
+  }
+
+  if(mode == 1) {
+    int result = add(num1,num2);
+    Serial.println("The result of the addidtion is:");
+    Serial.print(result);
+  } else if(mode == 2) {
+    int result = multiply(num1, num2);
+    Serial.println("The result of the multiplication is:");
+    Serial.print(result);
+  }
 }
 
 // put function definitions here:
-void blink(bool mode) {
-  if(mode == 0) {
-    digitalWrite(LED_BUILTIN, LOW);
-  } else if(mode == 1) {
-    digitalWrite(LED_BUILTIN, HIGH);
-  }
-
+int add(int x, int y) {
+  int sum = x + y;
+  return sum;
 }
 
-int myFunction(int x, int y) {
-  return x + y;
+int multiply(int x, int y) {
+  return ;
+}
+
+void blink(bool mode) {
+  return;
 }
