@@ -88,8 +88,7 @@ void loop() {
 
 // put function definitions here:
 int add(int x, int y) {
-  int sum = x + y;
-  return sum;
+  return ;
 }
 
 int multiply(int x, int y) {
