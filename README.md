@@ -4,7 +4,7 @@ Git Together Assignment for Computer Science
 
 
 
-\#### Who's done what?:
+#### Who's done what?:
 
 Lieuwe		Responsible for making the repository and the setup() and loop() functions.
 
