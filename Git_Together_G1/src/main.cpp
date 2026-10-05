@@ -19,8 +19,23 @@ int add(int x, int y) {
   return ;
 }
 
-int add(int x, int y) {
-  return ;
+int multiply(int x, int y) {
+  Serial.println ("Enter the first number: ");
+  while (Serial.available() == 0) 
+  {
+      x = Serial.parseInt();
+  }
+
+  Serial.println ("Enter the second number: ");
+  while (Serial.available() == 0) 
+  {
+      y = Serial.parseInt();
+  }
+
+
+  Serial.print("The Answer is ");
+  Serial.println (multiply(x, y));
+  return (x * y);
 }
 
 void blink() {
