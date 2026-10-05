@@ -16,7 +16,8 @@ void loop() {
 
 // put function definitions here:
 int add(int x, int y) {
-  return ;
+  int sum = x + y;
+  return sum;
 }
 
 int multiply(int x, int y) {
