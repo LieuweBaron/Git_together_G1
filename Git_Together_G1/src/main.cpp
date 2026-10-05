@@ -1,7 +1,8 @@
 #include <Arduino.h>
 
+long last_time = 0;
+bool blink_mode = 0;
 // put function declarations here:
-int myFunction(int, int);
 void blink();
 void on();
 void off();
@@ -9,7 +10,6 @@ void off();
 void setup() {
   // put your setup code here, to run once:
   pinMode(LED_BUILTIN, OUTPUT);
-  int result = myFunction(2, 3);
 }
 
 void loop() {
@@ -18,17 +18,13 @@ void loop() {
 }
 
 // put function definitions here:
-void blink() {
-  on();
-  off();
-}
+void blink(bool mode) {
+  if(mode == 0) {
+    digitalWrite(LED_BUILTIN, LOW);
+  } else if(mode == 1) {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
 
-void on() {
-  digitalWrite(LED_BUILTIN, HIGH);
-}
-
-void off() {
-  digitalWrite(LED_BUILTIN, LOW);
 }
 
 int myFunction(int x, int y) {
