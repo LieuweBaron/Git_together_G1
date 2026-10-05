@@ -9,6 +9,7 @@ void blink(bool mode);
 
 void setup() {
   Serial.begin(9600);
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
@@ -52,6 +53,7 @@ void loop() {
         blink_mode = 0;
         blink(blink_mode);
       }
+    }
   }
   int num1 = Serial.parseInt();
   while (Serial.available() > 0) {
