@@ -6,11 +6,13 @@ Git Together Assignment CS50
 
 \####Who's done what?:
 
-Lieuwe		Did the making of the repository.
 
-Alexander	Did
 
-Cihan		Did
+Lieuwe		Responsible for making the repository and the setup() and loop() functions.
 
-Niklas		Did
+Alexander	Responsible for the add() function.
+
+Cihan		Responsible for the blink() function
+
+Niklas		Responsible for the multiply() function
 
