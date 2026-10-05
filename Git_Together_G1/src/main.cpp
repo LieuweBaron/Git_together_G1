@@ -77,10 +77,12 @@ void loop() {
 
   if(mode == 1) {
     int result = add(num1,num2);
-    Serial.println();
+    Serial.println("The result of the addidtion is:");
+    Serial.print(result);
   } else if(mode == 2) {
     int result = multiply(num1, num2);
-    Serial.println();
+    Serial.println("The result of the multiplication is:");
+    Serial.print(result);
   }
 }
 
