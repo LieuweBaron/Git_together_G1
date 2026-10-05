@@ -4,7 +4,7 @@ Git Together Assignment CS50
 
 
 
-\####Who's done what?:
+### Who's done what?:
 
 Lieuwe		Did the making of the repository.
 
