@@ -1,12 +1,10 @@
-# Git\_together\_G1
+# Git Together Group 1
 
-Git Together Assignment CS50
-
-
-
-\####Who's done what?:
+Git Together Assignment for Computer Science
 
 
+
+\#### Who's done what?:
 
 Lieuwe		Responsible for making the repository and the setup() and loop() functions.
 
