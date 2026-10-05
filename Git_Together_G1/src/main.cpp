@@ -96,5 +96,9 @@ int multiply(int x, int y) {
 }
 
 void blink(bool mode) {
-  return;
+ if(mode == 1) {
+   digitalWrite(LED_BUILTIN, HIGH);
+ } else if(mode == 0) {
+   digitalWrite(LED_BUILTIN, LOW);
+ }
 }
